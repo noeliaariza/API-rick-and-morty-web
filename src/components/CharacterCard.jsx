@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function CharacterCard({ characterData }) {
   return (
     <li>
@@ -9,5 +11,13 @@ function CharacterCard({ characterData }) {
     </li>
   );
 }
+
+CharacterCard.propTypes = {
+  characterData: PropTypes.shape({
+    image: PropTypes.string,
+    name: PropTypes.string,
+    species: PropTypes.string,
+  }),
+};
 
 export default CharacterCard;
