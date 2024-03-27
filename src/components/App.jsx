@@ -7,16 +7,24 @@ import CharacterList from "./CharacterList";
 import Header from "./Header";
 import Filters from "./filters/Filters";
 import CharacterDetail from "./CharacterDetail";
+import localStorageService from "./services/localStorage";
 
 function App() {
   const [characters, setCharacters] = useState([]);
-  const [filterName, setFilterName] = useState("");
+  const [filterName, setFilterName] = useState(
+    localStorageService.get("characterSearch", "")
+  );
 
   useEffect(() => {
     getCharactersFromApi().then((characterData) => {
       setCharacters(characterData);
     });
   }, []);
+
+  useEffect(() => {
+    console.log("useEffect search");
+    localStorageService.set("characterSearch", filterName);
+  }, [filterName]);
 
   const handleChangeName = (value) => {
     setFilterName(value);
@@ -36,8 +44,6 @@ function App() {
     (character) => character.id === parseInt(characterId)
   );
 
-  console.log("esto es ", characterDetailData);
-
   return (
     <>
       <Header />
@@ -47,7 +53,10 @@ function App() {
             path="/"
             element={
               <>
-                <Filters onChangeName={handleChangeName} />
+                <Filters
+                  valueCharacter={filterName}
+                  onChangeName={handleChangeName}
+                />
                 <CharacterList characters={filteredCharacters} />
               </>
             }
