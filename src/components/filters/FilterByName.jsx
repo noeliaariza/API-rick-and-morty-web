@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 
 function FilterByName({ onChangeName }) {
   const handleChange = (ev) => {
+    ev.preventDefault();
     onChangeName(ev.target.value);
   };
   return (
