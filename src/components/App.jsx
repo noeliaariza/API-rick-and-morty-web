@@ -10,6 +10,7 @@ import CharacterDetail from "./CharacterDetail";
 import localStorageService from "./services/localStorage";
 import Error404 from "./Error404";
 import { Navigate } from "react-router";
+import BgHeader from "./BgHeader";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -47,6 +48,7 @@ function App() {
 
   return (
     <div className="container">
+      <BgHeader />
       <Header />
       <main>
         <Routes>

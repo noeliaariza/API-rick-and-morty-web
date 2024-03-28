@@ -4,7 +4,7 @@ import "../scss/components/CharacterDetail.scss";
 
 function CharacterDetail({ character }) {
   return (
-    <div className="characterDetailContainer">
+    <div className="characterDetailContainer fade-in">
       <Link className="characterDetailContainer__return" to={"/"}>
         <p>⬅️ Volver</p>
       </Link>
@@ -15,7 +15,9 @@ function CharacterDetail({ character }) {
           alt={character.name}
         />
         <div className="characterDetailContainer__data">
-          <h2>{character.name}</h2>
+          <h2 className="characterDetailContainer__data__h2">
+            {character.name}
+          </h2>
           <p>{`Status: ${character.status}`}</p>
           <p>{`Species: ${character.species}`}</p>
           <p>{`Origin: ${character.origin}`}</p>

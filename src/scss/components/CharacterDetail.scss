@@ -12,6 +12,7 @@
     justify-content: center;
     margin: 10px 0 0 0;
     padding: 30px;
+    border-radius: 10px;
     @media (min-width: 360px) and (max-width: 768px) {
       width: 350px;
       height: 450px;
@@ -22,6 +23,11 @@
   }
   &__data {
     padding: 0 0 0 50px;
+    &__h2 {
+      color: #ffff00;
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
     @media (min-width: 360px) and (max-width: 768px) {
       padding: 20px 0 0 0;
     }

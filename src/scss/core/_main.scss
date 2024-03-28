@@ -9,3 +9,8 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1s ease-in forwards;
+}
