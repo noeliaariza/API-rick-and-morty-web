@@ -17,6 +17,7 @@ function App() {
   const [filterName, setFilterName] = useState(
     localStorageService.get("characterSearch", "")
   );
+  const [filterSpecie, setFilterSpecie] = useState("");
 
   useEffect(() => {
     getCharactersFromApi().then((characterData) => {
@@ -32,9 +33,20 @@ function App() {
     setFilterName(value);
   };
 
-  const filteredCharacters = characters.filter((character) => {
-    return character.name.toLowerCase().includes(filterName.toLowerCase());
-  });
+  const handleChangeSpecie = (value) => {
+    setFilterSpecie(value);
+  };
+
+  const filteredCharacters = characters
+    .filter((character) => {
+      return character.name.toLowerCase().includes(filterName.toLowerCase());
+    })
+    .filter((character) => {
+      return (
+        filterSpecie.toLowerCase() === character.species.toLowerCase() ||
+        !filterSpecie
+      );
+    });
 
   const { pathname } = useLocation();
   const characterDetailRoute = matchPath("/character/:characterId", pathname);
@@ -58,7 +70,9 @@ function App() {
               <>
                 <Filters
                   valueCharacter={filterName}
+                  valueSpecie={filterSpecie}
                   onChangeName={handleChangeName}
+                  onChangeSpecie={handleChangeSpecie}
                 />
                 <CharacterList characters={filteredCharacters} />
               </>

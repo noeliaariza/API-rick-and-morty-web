@@ -1,0 +1,19 @@
+.filterBySpecieContainer {
+  font-size: 13px;
+  margin-left: 20px;
+  @media (min-width: 360px) and (max-width: 768px) {
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+  &__title {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  &__specieInput {
+    margin-left: 10px;
+  }
+}
+
+.alienContainer {
+  margin-left: 20px;
+}
