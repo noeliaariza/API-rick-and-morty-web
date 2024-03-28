@@ -9,7 +9,13 @@ function CharacterCard({ characterData }) {
         className="characterCard__link"
         to={`/character/${characterData.id}`}
       >
-        <img src={characterData.image} alt={characterData.name} />
+        <div className="characterCard__containerImg">
+          <img
+            className="characterCard__img"
+            src={characterData.image}
+            alt={characterData.name}
+          />
+        </div>
         <div className="characterCard__info">
           <h3>{characterData.name}</h3>
           <p>{characterData.species}</p>
