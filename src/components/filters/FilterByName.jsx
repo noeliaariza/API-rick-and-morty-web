@@ -14,6 +14,7 @@ function FilterByName({ onChangeName, valueCharacter }) {
         placeholder="Busca un personaje..."
         onChange={handleChange}
         value={valueCharacter}
+        name="byName"
       />
     </div>
   );

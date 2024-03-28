@@ -24,5 +24,14 @@
     border-radius: 5px;
     padding: 10px 20px;
     text-decoration: none;
+    text-align: center;
+    @media (min-width: 360px) and (max-width: 768px) {
+      width: 80%;
+    }
+  }
+  &__img {
+    @media (min-width: 360px) and (max-width: 768px) {
+      width: 80%;
+    }
   }
 }
