@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "../../scss/components/FilterByName.scss";
 
 function FilterByName({ onChangeName, valueCharacter }) {
   const handleChange = (ev) => {
@@ -8,6 +9,7 @@ function FilterByName({ onChangeName, valueCharacter }) {
   return (
     <div>
       <input
+        className="inputSearch"
         type="text"
         placeholder="Busca un personaje..."
         onChange={handleChange}

@@ -1,15 +1,20 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import "../scss/components/CharacterDetail.scss";
 
 function CharacterDetail({ character }) {
   return (
-    <div>
-      <Link to={"/"}>
+    <div className="characterDetailContainer">
+      <Link className="characterDetailContainer__return" to={"/"}>
         <p>⬅️ Volver</p>
       </Link>
-      <div>
-        <img src={character.image} alt={character.name} />
-        <div>
+      <div className="characterDetailContainer__info">
+        <img
+          className="characterDetailContainer__img"
+          src={character.image}
+          alt={character.name}
+        />
+        <div className="characterDetailContainer__data">
           <h2>{character.name}</h2>
           <p>{`Status: ${character.status}`}</p>
           <p>{`Species: ${character.species}`}</p>

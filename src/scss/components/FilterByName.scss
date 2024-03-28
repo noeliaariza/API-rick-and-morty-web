@@ -1,0 +1,19 @@
+.inputSearch {
+  border: 1px solid #09afc6;
+  width: 400px;
+  height: 40px;
+  color: #ffffff;
+  padding: 10px;
+  font-family: "Kode Mono", monospace;
+  margin: 0 0 40px 0;
+  background-color: #000;
+
+  @media (min-width: 360px) and (max-width: 768px) {
+    width: 350px;
+  }
+}
+::placeholder {
+  color: #ffffff;
+  opacity: 1; /* Firefox */
+  font-family: "Kode Mono", monospace;
+}

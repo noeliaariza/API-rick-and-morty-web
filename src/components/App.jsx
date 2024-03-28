@@ -8,6 +8,8 @@ import Header from "./Header";
 import Filters from "./filters/Filters";
 import CharacterDetail from "./CharacterDetail";
 import localStorageService from "./services/localStorage";
+import Error404 from "./Error404";
+import { Navigate } from "react-router";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -22,7 +24,6 @@ function App() {
   }, []);
 
   useEffect(() => {
-    console.log("useEffect search");
     localStorageService.set("characterSearch", filterName);
   }, [filterName]);
 
@@ -45,7 +46,7 @@ function App() {
   );
 
   return (
-    <>
+    <div className="container">
       <Header />
       <main>
         <Routes>
@@ -65,9 +66,11 @@ function App() {
             path="/character/:characterId"
             element={<CharacterDetail character={characterDetailData} />}
           />
+          <Route path="/Error404" element={<Error404 />} />
+          <Route path="*" element={<Navigate to="/Error404" />} />
         </Routes>
       </main>
-    </>
+    </div>
   );
 }
 

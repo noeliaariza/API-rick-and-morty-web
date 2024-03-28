@@ -1,0 +1,16 @@
+.header {
+  width: 500px;
+  //height: 204px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    width: 500px;
+
+    @media (min-width: 360px) and (max-width: 768px) {
+      width: 350px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.characterDetailContainer {
+  width: 600px;
+  @media (min-width: 360px) and (max-width: 768px) {
+    width: 350px;
+  }
+  &__info {
+    width: 600px;
+    height: 400px;
+    background-color: #00b0c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 0 0;
+    padding: 30px;
+    @media (min-width: 360px) and (max-width: 768px) {
+      width: 350px;
+      height: 450px;
+      margin: 10px 0 40px 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__data {
+    padding: 0 0 0 50px;
+    @media (min-width: 360px) and (max-width: 768px) {
+      padding: 20px 0 0 0;
+    }
+  }
+  &__img {
+    width: 250px;
+    height: 250px;
+    @media (min-width: 360px) and (max-width: 768px) {
+      margin-top: 30px;
+    }
+  }
+  &__return {
+    text-align: right;
+    text-decoration: none;
+  }
+}
