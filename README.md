@@ -49,8 +49,4 @@ Once the application is running, you can:
 
 ## Credits
 
-This application was developed by [Your Name].
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+This application was developed by Noelia Ariza.
