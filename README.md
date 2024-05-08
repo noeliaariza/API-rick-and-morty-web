@@ -5,7 +5,7 @@ This application utilizes the Rick and Morty API to display a list of characters
 ## Live Demo
 
 You can visit and test the application on GitHub Pages:
-[https://noeliaaariza.github.io/modulo-3-evaluacion-final-noeliaaariza/)
+https://noeliaaariza.github.io/modulo-3-evaluacion-final-noeliaaariza/
 
 ## Installation and Setup
 
